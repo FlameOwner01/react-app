@@ -53,20 +53,22 @@ const Course = ({match, history}) => {
 
     return (<div className= 'container'>
         <h2>Course</h2>
+
         <form className='input-form'>
+
             <div style= {{margin: '12px 0', padding: '6px'}}>
                 <label htmlFor='name'>
                     Course name:
                 </label>
             
-                <input type = 'text' name = 'name' value = {course.name} onChange ={changeHandler}/>
-                </div>
+                <input type = 'text' name = 'name' value = {course.name} onChange ={changeHandler} required/>
+            </div>
             <div style= {{margin: '12px 0', padding: '6px'}}>
                 <label htmlFor='points'>
                     Course points:
                 </label>
-                <input type = 'text' name = 'points' value={course.points} onChange ={changeHandler}/>
-        </div>
+                <input type = 'text' name = 'points' value={course.points} onChange ={changeHandler} required/>
+            </div>
         <hr/>
         {id !== '0' && (
         <div className = 'left'>

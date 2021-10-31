@@ -8,7 +8,8 @@ const Student = ({match, history}) => {
         _id: '0',
         firstName: '',
         lastName: '',
-        yearOfBirth: 0
+        yearOfBirth: 0,
+        address: ''
     });
 
     useEffect(() => {
@@ -62,7 +63,7 @@ const Student = ({match, history}) => {
                 <label htmlFor='firstName'>
                     Student first name:
                 </label>
-                <input type = 'text' name = 'firstName' value = {student.firstName} onChange ={changeHandler}/>
+                <input type = 'text' name = 'firstName' value = {student.firstName} onChange ={changeHandler} required/>
 
             </div>
 
@@ -70,7 +71,7 @@ const Student = ({match, history}) => {
                 <label htmlFor='lastName'>
                     Student last name:
                 </label>
-                <input type = 'text' name = 'lastName' value={student.lastName} onChange ={changeHandler}/>
+                <input type = 'text' name = 'lastName' value={student.lastName} onChange ={changeHandler} required/>
             </div>
 
         <div style= {{margin: '12px 0', padding: '6px'}}>
@@ -78,6 +79,12 @@ const Student = ({match, history}) => {
                     Students year of birth:
                 </label>
                 <input type = 'text' name = 'yearOfBirth' value={student.yearOfBirth} onChange ={changeHandler}/>
+        </div>
+        <div style= {{margin: '12px 0', padding: '6px'}}>
+                <label htmlFor='address'>
+                    Address:
+                </label>
+                <input type = 'text' name = 'address' value={student.address} onChange ={changeHandler}/>
         </div>
 
         <hr/>
