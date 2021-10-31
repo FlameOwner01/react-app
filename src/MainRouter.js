@@ -9,7 +9,7 @@ const MainRouter = () => {
             <Route exact path = '/courses' component = {Courses} />
             <Route exact path = '/courses/:id' component = {Course} />
             <Route exact path = '/students' component = {Students} />
-            <Route exact path = '/student/:id' component = {Student} />
+            <Route exact path = '/students/:id' component = {Student} />
         </Switch>
     );
 }

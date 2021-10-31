@@ -52,39 +52,46 @@ const Student = ({match, history}) => {
         })
     }
 
-    return (<div className= 'container'>
+    return (
+        <div className= 'container'>
         <h2>Student</h2>
+        
         <form className='input-form'>
+
             <div style= {{margin: '12px 0', padding: '6px'}}>
                 <label htmlFor='firstName'>
                     Student first name:
                 </label>
-            
                 <input type = 'text' name = 'firstName' value = {student.firstName} onChange ={changeHandler}/>
-                </div>
+
+            </div>
+
             <div style= {{margin: '12px 0', padding: '6px'}}>
                 <label htmlFor='lastName'>
                     Student last name:
                 </label>
-                <input type = 'text' name = 'points' value={student.lastName} onChange ={changeHandler}/>
-        </div>
+                <input type = 'text' name = 'lastName' value={student.lastName} onChange ={changeHandler}/>
+            </div>
+
         <div style= {{margin: '12px 0', padding: '6px'}}>
                 <label htmlFor='yearOfBirth'>
                     Students year of birth:
                 </label>
                 <input type = 'text' name = 'yearOfBirth' value={student.yearOfBirth} onChange ={changeHandler}/>
         </div>
+
         <hr/>
         {id !== '0' && (
         <div className = 'left'>
             <button type = 'button' onClick= {del}>DELETE</button>
         </div>
         )}
-        <div className= 'right'>
-        <button type = 'button' onClick={back}>BACK</button>
+            <div className= 'right'>
+                <button type = 'button' onClick={back}>BACK</button>
         &nbsp;&nbsp;&nbsp;
-        <button type = 'button' onClick={save}>SAVE</button>
-        </div>
+                <button type = 'button' onClick={save}>SAVE</button>
+            </div>
+
         </form>
         </div>
     );
