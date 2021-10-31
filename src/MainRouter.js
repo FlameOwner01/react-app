@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from 'react-router-dom';
-import { Home, Students, Courses, Course } from './components';
+import { Home, Students, Student, Courses, Course } from './components';
 
 const MainRouter = () => {
     return (
@@ -9,6 +9,7 @@ const MainRouter = () => {
             <Route exact path = '/courses' component = {Courses} />
             <Route exact path = '/courses/:id' component = {Course} />
             <Route exact path = '/students' component = {Students} />
+            <Route exact path = '/student/:id' component = {Student} />
         </Switch>
     );
 }
