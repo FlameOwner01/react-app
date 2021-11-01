@@ -79,7 +79,7 @@ const Student = ({match, history}) => {
                 </label>
                 <input type = 'text' name = 'yearOfBirth' value={student.yearOfBirth} onChange ={changeHandler}/>
         </div>
-        
+
         <div style= {{margin: '12px 0', padding: '6px'}}>
                 <label htmlFor='address'>
                     Address:

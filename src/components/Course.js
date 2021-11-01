@@ -51,7 +51,7 @@ const Course = ({match, history}) => {
         })
     }
 
-    return (<div className= 'container'>
+    return <div className= 'container'>
         <h2>Course</h2>
 
         <form className='input-form'>
@@ -82,7 +82,7 @@ const Course = ({match, history}) => {
         </div>
         </form>
         </div>
-    );
+       
 }
 
 export default Course;
